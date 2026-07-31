@@ -20,7 +20,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@theme/*": ["./src/theme/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@sections/*": ["./src/sections/*"],
+      "@layout/*": ["./src/layout/*"]
+    }
   },
   "include": ["src"]
 }
