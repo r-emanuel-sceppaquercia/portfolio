@@ -29,6 +29,17 @@ Portfolio/
 │   └── Backend/
 ```
 
+## Features
+
+- Responsive design (under development)
+- Dark theme (under development)
+- Project showcase (under development)
+- Contact form (under development)
+- Download CV (under development)
+- REST API integration (planned)
+- Authentication (planned)
+- Admin panel (planned)
+
 ## Status
 
 🚧 Currently under development.
