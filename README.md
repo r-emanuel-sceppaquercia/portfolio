@@ -1,27 +1,34 @@
 # Portfolio
 
-Personal portfolio developed as a full-stack application.
+Personal portfolio developed as a full-stack application to showcase my projects, technical skills, and professional experience.
 
-## Stack
+## Tech Stack
 
 ### Frontend
 
-- React v19.2.8
-- TypeScript v6.0.2
-- Vite v8.2.0
-- Material UI v9.2.0
-- Prettier v3.9.6
+- React 19
+- TypeScript
+- Vite
+- Material UI
+- Prettier
+- ESLint
 
-### Backend (planned)
+### Backend _(planned)_
 
 - Java
 - Spring Boot
 - Spring Security
 - MySQL
 
-## Project structure
+## Project Structure
 
+```text
 Portfolio/
 ├── Modules/
-│ ├── Frontend/
-│ └── Backend/
+│   ├── Frontend/
+│   └── Backend/
+```
+
+## Status
+
+🚧 Currently under development.
