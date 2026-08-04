@@ -3,10 +3,10 @@ import { AppButton, AppSection, AppTypography } from "@/components/common";
 
 export default function Hero() {
   return (
-    <AppSection>
+    <AppSection id="hero">
       <Box
         sx={{
-          minHeight: "90vh",
+          minHeight: "70vh",
           display: "flex",
           alignItems: "center",
         }}
