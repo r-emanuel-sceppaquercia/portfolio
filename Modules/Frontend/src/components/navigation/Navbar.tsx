@@ -12,6 +12,8 @@ import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import DownloadIcon from "@mui/icons-material/Download";
 import { NAVBAR_HEIGHT } from "@/constants/Layout";
+import { scrollToSection } from "@/utils/scroll";
+import { downloadCV } from "@/utils/download";
 
 const navigationItems = [
   { label: "About", target: "about" },
@@ -28,16 +30,7 @@ export function Navbar() {
 
   const handleNavigation = (sectionId: string) => {
     closeMobileMenu();
-
-    if (sectionId === "hero") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    scrollToSection(sectionId);
   };
 
   return (
@@ -84,6 +77,7 @@ export function Navbar() {
               variant="contained"
               sx={{ ml: 2 }}
               endIcon={<DownloadIcon />}
+              onClick={downloadCV}
             >
               Download CV
             </AppButton>
@@ -126,6 +120,7 @@ export function Navbar() {
                 fullWidth
                 color="secondary"
                 sx={{ mr: 2, mt: 2, justifyContent: "flex-end" }}
+                onClick={downloadCV}
               >
                 <DownloadIcon sx={{ mr: 1 }} />
                 Download CV

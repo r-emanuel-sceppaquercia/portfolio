@@ -6,6 +6,8 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import DownloadIcon from "@mui/icons-material/Download";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { NAVBAR_HEIGHT } from "@/constants/Layout";
+import { scrollToSection } from "@/utils/scroll";
+import { downloadCV } from "@/utils/download";
 
 const technologies = ["Java", "Spring Boot", "React", "TypeScript"];
 
@@ -70,26 +72,50 @@ export default function Hero() {
 
               {/* Buttons */}
               <Stack direction="row" spacing={2}>
-                <AppButton variant="contained" endIcon={<ArrowForwardIcon />}>
+                <AppButton
+                  variant="contained"
+                  endIcon={<ArrowForwardIcon />}
+                  onClick={() => scrollToSection("projects")}
+                >
                   Projects
                 </AppButton>
 
-                <AppButton variant="outlined" endIcon={<DownloadIcon />}>
+                <AppButton
+                  variant="outlined"
+                  endIcon={<DownloadIcon />}
+                  onClick={downloadCV}
+                >
                   Download CV
                 </AppButton>
               </Stack>
 
               {/* Social media */}
               <Stack direction="row" spacing={1}>
-                <IconButton>
+                <IconButton
+                  component="a"
+                  href="https://github.com/r-emanuel-sceppaquercia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
                   <GitHubIcon />
                 </IconButton>
 
-                <IconButton>
+                <IconButton
+                  component="a"
+                  href="https://www.linkedin.com/in/emanuel-sceppaquercia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
                   <LinkedInIcon />
                 </IconButton>
 
-                <IconButton>
+                <IconButton
+                  component="a"
+                  href="mailto:emanuel.sceppaquercia@email.com"
+                  aria-label="Email"
+                >
                   <EmailOutlinedIcon />
                 </IconButton>
               </Stack>
