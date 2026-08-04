@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import { AppContainer } from "@components/AppContainer";
+import { AppContainer } from "@/components/common/AppContainer";
 
 interface AppSectionProps {
   id?: string;
