@@ -6,6 +6,7 @@ import {
   IconButton,
   Drawer,
   Divider,
+  alpha,
 } from "@mui/material";
 import { useState } from "react";
 import AdbIcon from "@mui/icons-material/Adb";
@@ -14,6 +15,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import { NAVBAR_HEIGHT } from "@/constants/Layout";
 import { scrollToSection } from "@/utils/scroll";
 import { downloadCV } from "@/utils/download";
+import { useScrolled } from "@/hooks/useScrolled";
 
 const navigationItems = [
   { label: "About", target: "about" },
@@ -28,13 +30,29 @@ export function Navbar() {
   const openMobileMenu = () => setMobileMenuOpen(true);
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
+  const scrolled = useScrolled(24);
+
   const handleNavigation = (sectionId: string) => {
     closeMobileMenu();
     scrollToSection(sectionId);
   };
 
   return (
-    <AppBar position="sticky" elevation={0} color="transparent">
+    <AppBar
+      position="sticky"
+      elevation={0}
+      color="transparent"
+      sx={(theme) => ({
+        backgroundColor: scrolled
+          ? alpha(theme.palette.background.default, 0.78)
+          : "transparent",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+        WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
+        borderBottom: `1px solid ${scrolled ? alpha(theme.palette.common.white, 0.08) : "transparent"}`,
+        transition:
+          "background-color .25s ease, backdrop-filter .25s ease, border-color .25s ease",
+      })}
+    >
       <AppContainer>
         <Toolbar
           disableGutters
@@ -97,7 +115,11 @@ export function Navbar() {
             onClose={closeMobileMenu}
           >
             <Box sx={{ width: 200, p: 2 }}>
-              <AppTypography variant="h6" sx={{ mr: 2, textAlign: "end" }}>
+              <AppTypography
+                variant="h6"
+                sx={{ mr: 2, textAlign: "end" }}
+                onClick={() => handleNavigation("hero")}
+              >
                 ES
               </AppTypography>
 
