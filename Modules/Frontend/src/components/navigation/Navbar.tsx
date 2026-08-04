@@ -129,19 +129,19 @@ export function Navbar() {
                 <AppButton
                   key={item.target}
                   fullWidth
-                  sx={{ mr: 2, justifyContent: "flex-end" }}
+                  sx={{ justifyContent: "flex-end" }}
                   onClick={() => handleNavigation(item.target)}
                 >
                   {item.label}
                 </AppButton>
               ))}
 
-              <Divider sx={{ my: 1 }} />
+              <Divider sx={{ my: 2 }} />
 
               <AppButton
                 fullWidth
                 color="secondary"
-                sx={{ mr: 2, mt: 2, justifyContent: "flex-end" }}
+                sx={{ mt: 2, justifyContent: "flex-end" }}
                 onClick={downloadCV}
               >
                 <DownloadIcon sx={{ mr: 1 }} />
