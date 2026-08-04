@@ -11,7 +11,7 @@ export function MainLayout({ children }: MainLayoutProps) {
 
       <main>{children}</main>
 
-      <footer>{/* next */}</footer>
+      <footer>{/* wip */}</footer>
     </>
   );
 }

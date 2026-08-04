@@ -11,6 +11,7 @@ import { useState } from "react";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import DownloadIcon from "@mui/icons-material/Download";
+import { NAVBAR_HEIGHT } from "@/constants/Layout";
 
 const navigationItems = [
   { label: "About", target: "about" },
@@ -44,7 +45,11 @@ export function Navbar() {
       <AppContainer>
         <Toolbar
           disableGutters
-          sx={{ justifyContent: "space-between", alignItems: "center" }}
+          sx={{
+            height: NAVBAR_HEIGHT,
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
         >
           {/* Logo */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -75,7 +80,11 @@ export function Navbar() {
                 {item.label}
               </AppButton>
             ))}
-            <AppButton variant="contained" sx={{ ml: 2 }}>
+            <AppButton
+              variant="contained"
+              sx={{ ml: 2 }}
+              endIcon={<DownloadIcon />}
+            >
               Download CV
             </AppButton>
           </Box>
