@@ -17,7 +17,6 @@ import { SiDocker } from "react-icons/si";
 import { SiDbeaver } from "react-icons/si";
 import { SiJira } from "react-icons/si";
 import { SiUnity } from "react-icons/si";
-import { TbBrandCSharp } from "react-icons/tb";
 import { SiAudacity } from "react-icons/si";
 import { SiAutodeskmaya } from "react-icons/si";
 import { SiBlender } from "react-icons/si";

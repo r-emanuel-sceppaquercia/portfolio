@@ -2,8 +2,6 @@ import { CardContent, Chip, Stack } from "@mui/material";
 import { AppCard, AppTypography } from "../common";
 import type { SkillCategory } from "@/constants/SkillsData";
 
-import { SiAutodeskmaya } from "react-icons/si";
-
 export default function SkillCard({ title, skills }: SkillCategory) {
   return (
     <AppCard sx={{ height: "100%" }}>
@@ -26,6 +24,16 @@ export default function SkillCard({ title, skills }: SkillCategory) {
                   ) : undefined
                 }
                 label={skill.name}
+                sx={{
+                  transition: "all .2s ease",
+                  "&:hover": {
+                    transform: "translateY(-2px)",
+                    borderColor: "primary.main",
+                    bgcolor: "action.hover",
+                    color: "primary.main",
+                    cursor: "default",
+                  },
+                }}
               />
             ))}
           </Stack>

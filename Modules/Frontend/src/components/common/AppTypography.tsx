@@ -1,5 +1,7 @@
 import Typography, { type TypographyProps } from "@mui/material/Typography";
 
 export function AppTypography(props: TypographyProps) {
-  return <Typography {...props} />;
+  return (
+    <Typography {...props} sx={{ overflowWrap: "break-word", ...props.sx }} />
+  );
 }
