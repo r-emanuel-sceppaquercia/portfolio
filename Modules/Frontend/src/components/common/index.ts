@@ -3,3 +3,4 @@ export * from "./AppCard";
 export * from "./AppContainer";
 export * from "./AppSection";
 export * from "./AppTypography";
+export * from "./SectionHeader";
