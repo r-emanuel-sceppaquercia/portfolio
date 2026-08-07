@@ -12,6 +12,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Portfolio Website",
+    description:
+      "A responsive portfolio built with ReactTS and Material UI to showcase my projects and technical skills.",
+    technologies: ["React", "TypeScript", "Material Ui", "Vite"],
+    img: "/images/portfolio_promotional.png",
+    category: "WEB DEVELOPMENT",
+    status: "In progress",
+    featured: true,
+    github: "https://github.com/r-emanuel-sceppaquercia/portfolio",
+    demo: "",
+  },
+  {
     title: "Stalker Based Dioram",
     description:
       "A post-apocalyptic scene inspired by S.T.A.L.K.E.R., modeled in Maya and textured with Substance Painter",
@@ -24,7 +36,7 @@ export const projects: Project[] = [
     demo: "https://sketchfab.com/3d-models/stalker-village-dioram-fbd0ab9b72ee4eddbb230470e8d30ec8",
   },
   {
-    title: "Fear & Souls",
+    title: "Fears & Souls",
     description:
       "Demo of my first game, developed with Construct 2, featuring custom mechanics, artwork and animations.",
     technologies: ["Construct2", "Photoshop", "Dragon Bones"],

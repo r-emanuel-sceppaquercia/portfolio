@@ -90,7 +90,7 @@ export default function ProjectCard({
         <Stack direction="row" spacing={1} sx={{ mt: "auto", pt: 3 }}>
           {github && (
             <AppButton
-              variant="outlined"
+              variant="contained"
               size="small"
               color="primary"
               href={github}
