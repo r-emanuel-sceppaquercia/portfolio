@@ -6,8 +6,9 @@ export function AppButton(props: ButtonProps) {
       {...props}
       sx={{
         "&:hover": {
-          backgroundColor: props.variant === "contained" ? "" : "transparent",
-          color: props.variant === "contained" ? "" : "primary.main",
+          backgroundColor:
+            props.variant === "contained" ? undefined : "transparent",
+          color: props.variant === "contained" ? undefined : "primary.main",
         },
         ...props.sx,
       }}

@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Stack, Chip } from "@mui/material";
+import { Box, Grid, IconButton, Stack, Chip, Icon } from "@mui/material";
 import { AppButton, AppSection, AppTypography } from "@/components/common";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -8,6 +8,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { NAVBAR_HEIGHT } from "@/constants/Layout";
 import { scrollToSection } from "@/utils/scroll";
 import { downloadCV } from "@/utils/download";
+import handIcon from "../../src/assets/hand_icon.png";
 
 const technologies = ["Java", "Spring Boot", "React", "TypeScript"];
 
@@ -25,9 +26,32 @@ export default function Hero() {
           <Grid size={{ xs: 12, md: 7 }}>
             {/* Presentation */}
             <Stack spacing={3}>
-              <AppTypography variant="h5" color="textSecondary">
-                Hello, I'm Emanuel 👋
-              </AppTypography>
+              <Stack spacing={2} direction="row">
+                <AppTypography variant="h5" color="textSecondary">
+                  Hello, I'm Emanuel
+                </AppTypography>
+
+                <Box
+                  component="img"
+                  src={handIcon}
+                  alt="Waving hand"
+                  sx={{
+                    alignItems: "center",
+                    width: 23,
+                    height: 23,
+                    transformOrigin: "70% 70%",
+                    animation: "wave 2.8s ease-in-out infinite",
+                    "@keyframes wave": {
+                      "0%, 60%, 100%": { transform: "rotate(0deg)" },
+                      "10%": { transform: "rotate(12deg)" },
+                      "20%": { transform: "rotate(-8deg)" },
+                      "30%": { transform: "rotate(12deg)" },
+                      "40%": { transform: "rotate(-4deg)" },
+                      "50%": { transform: "rotate(8deg)" },
+                    },
+                  }}
+                />
+              </Stack>
 
               <Stack spacing={1}>
                 <AppTypography variant="h1">Full Stack Developer</AppTypography>
@@ -36,7 +60,7 @@ export default function Hero() {
                   color="textSecondary"
                   sx={{ fontSize: "0.75em" }}
                 >
-                  Building modern web applications
+                  Also Game Developer And 3D Artist!
                 </AppTypography>
               </Stack>
 
