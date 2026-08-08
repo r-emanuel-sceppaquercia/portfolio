@@ -1,3 +1,4 @@
+import QuickFactsCard from "@/components/cards/QuickFactsCard";
 import { AppSection, AppTypography, SectionHeader } from "@/components/common";
 import { Grid, Stack } from "@mui/material";
 
@@ -8,7 +9,13 @@ export function About() {
 
       <Grid container spacing={8}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Stack spacing={3} sx={{ mt: 1 }}>
+          <Stack
+            spacing={3}
+            sx={{
+              height: { xs: "auto", md: "100%" },
+              justifyContent: { xs: "flex-start", md: "center" },
+            }}
+          >
             <AppTypography color="textSecondary" sx={{ maxWidth: 650 }}>
               I'm a Full Stack Developer focused on building modern and
               maintainable web applications using Java, Spring Boot, React and
@@ -30,7 +37,9 @@ export function About() {
           </Stack>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 5 }}>{/* Quick facts card */}</Grid>
+        <Grid size={{ xs: 12, md: 5 }}>
+          <QuickFactsCard />
+        </Grid>
       </Grid>
     </AppSection>
   );
