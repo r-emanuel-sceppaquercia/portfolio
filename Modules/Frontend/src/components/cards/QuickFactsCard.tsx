@@ -1,11 +1,9 @@
-import { Box, CardContent, Divider, Stack } from "@mui/material";
+import { Box, CardContent, Stack } from "@mui/material";
 import { AppCard, AppTypography } from "@/components/common";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 import CodeIcon from "@mui/icons-material/Code";
 import TrackChangesIcon from "@mui/icons-material/TrackChanges";
-import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import PaletteIcon from "@mui/icons-material/Palette";
-import LayersIcon from "@mui/icons-material/Layers";
 import TerrainIcon from "@mui/icons-material/Terrain";
 
 const quickFacts = [
