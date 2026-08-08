@@ -5,9 +5,12 @@ import {
   SectionHeader,
 } from "@/components/common";
 import { IconButton, Stack } from "@mui/material";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import { SiSketchfab } from "react-icons/si";
+import { LiaItchIo } from "react-icons/lia";
+import { LiaArtstation } from "react-icons/lia";
 
 export function Contact() {
   return (
@@ -38,7 +41,7 @@ export function Contact() {
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <GitHubIcon />
+          <GithubIcon sx={{ fontSize: 22 }} />
         </IconButton>
 
         <IconButton
@@ -49,6 +52,36 @@ export function Contact() {
           aria-label="LinkedIn"
         >
           <LinkedInIcon />
+        </IconButton>
+
+        <IconButton
+          component="a"
+          href="https://ema-scpp.itch.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="itch.io"
+        >
+          <LiaItchIo />
+        </IconButton>
+
+        <IconButton
+          component="a"
+          href="https://sketchfab.com/emanuel.sceppaquercia"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sketchfab"
+        >
+          <SiSketchfab size={20} />
+        </IconButton>
+
+        <IconButton
+          component="a"
+          href="https://www.artstation.com/emanuel-sceppaquercia"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="ArtStation"
+        >
+          <LiaArtstation />
         </IconButton>
       </Stack>
     </AppSection>
