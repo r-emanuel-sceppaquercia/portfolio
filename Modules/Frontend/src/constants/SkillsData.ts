@@ -49,8 +49,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "React", icon: SiReact },
       { name: "React Native", icon: SiReact },
       { name: "Vite", icon: SiVite },
-      { name: "Javascript", icon: SiJavascript },
-      { name: "Typescript", icon: SiTypescript },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "Material UI", icon: SiMui },
       { name: "Prettier", icon: SiPrettier },
     ],
@@ -58,8 +58,8 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Databases",
     skills: [
-      { name: "MySql", icon: SiMysql },
-      { name: "PostgreSql", icon: SiPostgresql },
+      { name: "MySQL", icon: SiMysql },
+      { name: "PostgreSQL", icon: SiPostgresql },
     ],
   },
   {
@@ -83,7 +83,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "3D Artist",
+    title: "3D Art",
     skills: [
       { name: "Maya", icon: SiAutodeskmaya },
       { name: "Blender", icon: SiBlender },
