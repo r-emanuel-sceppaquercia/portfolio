@@ -9,13 +9,17 @@ import {
   alpha,
 } from "@mui/material";
 import { useState } from "react";
-import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import DownloadIcon from "@mui/icons-material/Download";
 import { NAVBAR_HEIGHT } from "@/constants/Layout";
 import { scrollToSection } from "@/utils/scroll";
 import { downloadCV } from "@/utils/download";
 import { useScrolled } from "@/hooks/useScrolled";
+import { useRotatingText } from "@/hooks/useRotatingText";
+import CodeIcon from "@mui/icons-material/Code";
+import joystick from "@/../public/joystick.png";
+
+const roles = ["Development", "Video Games", "3D Art"];
 
 const navigationItems = [
   { label: "About", target: "about" },
@@ -31,6 +35,12 @@ export function Navbar() {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   const scrolled = useScrolled(24);
+
+  const { text: currentRole, visible: roleVisible } = useRotatingText(
+    roles,
+    3000,
+    300,
+  );
 
   const handleNavigation = (sectionId: string) => {
     closeMobileMenu();
@@ -65,8 +75,42 @@ export function Navbar() {
           {/* Logo */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <AppButton color="inherit" onClick={() => handleNavigation("hero")}>
-              <AdbIcon sx={{ mr: 1 }} />
-              <AppTypography variant="h6">ES</AppTypography>
+              <Box
+                component="img"
+                src={joystick}
+                alt="Chip brain"
+                sx={{ alignItems: "center", width: 28, height: 28, mr: 1.5 }}
+              />
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <AppTypography variant="h6" sx={{ lineHeight: 1 }}>
+                  ES
+                </AppTypography>
+
+                <AppTypography
+                  variant="caption"
+                  color="textSecondary"
+                  sx={{
+                    fontSize: ".75em",
+                    display: "block",
+                    lineHeight: 1,
+                    mt: 0.5,
+                    opacity: roleVisible ? 1 : 0,
+                    transform: roleVisible
+                      ? "translateY(0)"
+                      : "translateY(8px)",
+                    transition: "opacity .5s ease, transform .5s ease",
+                  }}
+                >
+                  {currentRole}
+                </AppTypography>
+              </Box>
             </AppButton>
           </Box>
 
