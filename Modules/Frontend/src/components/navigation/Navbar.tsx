@@ -16,7 +16,6 @@ import { scrollToSection } from "@/utils/scroll";
 import { downloadCV } from "@/utils/download";
 import { useScrolled } from "@/hooks/useScrolled";
 import { useRotatingText } from "@/hooks/useRotatingText";
-import CodeIcon from "@mui/icons-material/Code";
 import joystick from "@/../public/joystick.png";
 
 const roles = ["Development", "Video Games", "3D Art"];

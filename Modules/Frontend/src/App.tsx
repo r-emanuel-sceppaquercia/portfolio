@@ -5,6 +5,7 @@ import { Skills } from "@sections/Skills";
 import { Projects } from "@sections/Projects";
 import { Contact } from "@sections/Contact";
 import Footer from "@components/footer/Footer";
+import BackToTopButton from "./components/buttons/BackToTopButton";
 
 export function App() {
   return (
@@ -16,6 +17,8 @@ export function App() {
         <Projects />
         <Contact />
         <Footer />
+
+        <BackToTopButton />
       </MainLayout>
     </>
   );
