@@ -9,6 +9,7 @@ import { NAVBAR_HEIGHT } from "@/constants/Layout";
 import { scrollToSection } from "@/utils/scroll";
 import { downloadCV } from "@/utils/download";
 import handIcon from "../../src/assets/hand_icon.png";
+import MusicPlayerCard from "@/components/cards/MusicPlayerCard";
 
 const technologies = ["Java", "Spring Boot", "React", "TypeScript"];
 
@@ -22,12 +23,16 @@ export default function Hero() {
           alignItems: "center",
         }}
       >
-        <Grid container spacing={8} sx={{ alignItems: "center" }}>
+        <Grid
+          container
+          spacing={8}
+          sx={{ alignItems: "center", width: "100%" }}
+        >
           <Grid size={{ xs: 12, md: 7 }}>
             {/* Presentation */}
             <Stack spacing={3}>
               <Stack spacing={2} direction="row">
-                <AppTypography variant="h5" color="textSecondary">
+                <AppTypography variant="h5" color="primary">
                   Hello, I'm Emanuel
                 </AppTypography>
 
@@ -67,7 +72,7 @@ export default function Hero() {
               <AppTypography
                 variant="body1"
                 color="textSecondary"
-                sx={{ maxWidth: 800 }}
+                sx={{ maxWidth: 650 }}
               >
                 I develop scalable web applications using Java, Spring Boot,
                 React and TypeScript.
@@ -76,7 +81,7 @@ export default function Hero() {
               <AppTypography
                 variant="body1"
                 color="textSecondary"
-                sx={{ maxWidth: 800 }}
+                sx={{ maxWidth: 650 }}
               >
                 I focus on clean code, maintainable architecture and great user
                 experiences.
@@ -146,7 +151,17 @@ export default function Hero() {
             </Stack>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 5 }}>{/* Image or ilustration */}</Grid>
+          <Grid
+            size={{ xs: 12, md: 5 }}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "end",
+              justifyContent: { xs: "center", md: "flex-end" },
+            }}
+          >
+            {<MusicPlayerCard />}
+          </Grid>
         </Grid>
       </Box>
     </AppSection>
