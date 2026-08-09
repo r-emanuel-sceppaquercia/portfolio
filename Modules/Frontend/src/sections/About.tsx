@@ -37,7 +37,7 @@ export function About() {
           </Stack>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 5 }}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <QuickFactsCard />
         </Grid>
       </Grid>

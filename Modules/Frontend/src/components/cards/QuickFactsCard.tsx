@@ -31,7 +31,7 @@ const quickFacts = [
 
 export default function QuickFactsCard() {
   return (
-    <AppCard sx={{ height: "100%" }}>
+    <AppCard sx={{ height: "100%", maxWidth: 550 }}>
       <CardContent>
         <Stack spacing={2.5}>
           <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>

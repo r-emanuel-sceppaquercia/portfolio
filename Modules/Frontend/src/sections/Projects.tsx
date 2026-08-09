@@ -17,7 +17,7 @@ export function Projects() {
 
       <Grid container spacing={2} sx={{ mt: 4 }}>
         {projects.map((project) => (
-          <Grid key={project.title} size={{ xs: 12, sm: 4 }}>
+          <Grid key={project.title} size={{ xs: 12, sm: 6, md: 4 }}>
             <ProjectCard
               key={project.title}
               title={project.title}
