@@ -1,0 +1,169 @@
+import { Box, Grid, IconButton, Stack, Chip } from "@mui/material";
+import { AppButton, AppSection, AppTypography } from "@/components/common";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import DownloadIcon from "@mui/icons-material/Download";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { NAVBAR_HEIGHT } from "@/constants/Layout";
+import { scrollToSection } from "@/utils/scroll";
+import { downloadCV } from "@/utils/download";
+import handIcon from "../../src/assets/hand_icon.png";
+import MusicPlayerCard from "@/components/cards/MusicPlayerCard";
+
+const technologies = ["Java", "Spring Boot", "React", "TypeScript"];
+
+export default function Hero() {
+  return (
+    <AppSection id="hero" sx={{ py: 0 }}>
+      <Box
+        sx={{
+          minHeight: `calc(100dvh - ${NAVBAR_HEIGHT}px)`,
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <Grid
+          container
+          spacing={8}
+          sx={{ alignItems: "center", width: "100%" }}
+        >
+          <Grid size={{ xs: 12, md: 7 }}>
+            {/* Presentation */}
+            <Stack spacing={3}>
+              <Stack spacing={2} direction="row">
+                <AppTypography variant="h5" color="primary">
+                  Hello, I'm Emanuel
+                </AppTypography>
+
+                <Box
+                  component="img"
+                  src={handIcon}
+                  alt="Waving hand"
+                  sx={{
+                    alignItems: "center",
+                    width: 23,
+                    height: 23,
+                    transformOrigin: "70% 70%",
+                    animation: "wave 2.8s ease-in-out infinite",
+                    "@keyframes wave": {
+                      "0%, 60%, 100%": { transform: "rotate(0deg)" },
+                      "10%": { transform: "rotate(12deg)" },
+                      "20%": { transform: "rotate(-8deg)" },
+                      "30%": { transform: "rotate(12deg)" },
+                      "40%": { transform: "rotate(-4deg)" },
+                      "50%": { transform: "rotate(8deg)" },
+                    },
+                  }}
+                />
+              </Stack>
+
+              <Stack spacing={1}>
+                <AppTypography variant="h1">Full Stack Developer</AppTypography>
+                <AppTypography
+                  variant="h5"
+                  color="textSecondary"
+                  sx={{ fontSize: "0.75em" }}
+                >
+                  Also Game Developer And 3D Artist!
+                </AppTypography>
+              </Stack>
+
+              <AppTypography
+                variant="body1"
+                color="textSecondary"
+                sx={{ maxWidth: 650 }}
+              >
+                I develop scalable web applications using Java, Spring Boot,
+                React and TypeScript.
+              </AppTypography>
+
+              <AppTypography
+                variant="body1"
+                color="textSecondary"
+                sx={{ maxWidth: 650 }}
+              >
+                I focus on clean code, maintainable architecture and great user
+                experiences.
+              </AppTypography>
+
+              {/* Stack */}
+              <Stack direction="row" spacing={1} useFlexGap>
+                {technologies.map((tech) => (
+                  <Chip
+                    key={tech}
+                    label={tech}
+                    variant="outlined"
+                    size="small"
+                  />
+                ))}
+              </Stack>
+
+              {/* Buttons */}
+              <Stack direction="row" spacing={2}>
+                <AppButton
+                  variant="contained"
+                  endIcon={<ArrowForwardIcon />}
+                  onClick={() => scrollToSection("projects")}
+                >
+                  Projects
+                </AppButton>
+
+                <AppButton
+                  variant="outlined"
+                  endIcon={<DownloadIcon />}
+                  onClick={downloadCV}
+                >
+                  Download CV
+                </AppButton>
+              </Stack>
+
+              {/* Social media */}
+              <Stack direction="row" spacing={1}>
+                <IconButton
+                  component="a"
+                  href="https://github.com/r-emanuel-sceppaquercia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <GitHubIcon />
+                </IconButton>
+
+                <IconButton
+                  component="a"
+                  href="https://www.linkedin.com/in/emanuel-sceppaquercia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedInIcon />
+                </IconButton>
+
+                <IconButton
+                  component="a"
+                  href="mailto:emanuel.sceppaquercia@email.com"
+                  aria-label="Email"
+                >
+                  <EmailOutlinedIcon />
+                </IconButton>
+              </Stack>
+            </Stack>
+          </Grid>
+
+          <Grid
+            size={{ xs: 12, md: 5 }}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "end",
+              justifyContent: { xs: "center", md: "flex-end" },
+            }}
+          >
+            {<MusicPlayerCard />}
+          </Grid>
+        </Grid>
+      </Box>
+    </AppSection>
+  );
+}
