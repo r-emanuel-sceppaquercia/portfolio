@@ -27,7 +27,7 @@ export function Contact() {
         variant="contained"
         size="large"
         startIcon={<EmailOutlinedIcon />}
-        href="mailto:your@email.com"
+        href="mailto:emanuel.sceppaquercia@gmail.com"
         sx={{ mt: 4 }}
       >
         Send me an email

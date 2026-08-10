@@ -142,7 +142,7 @@ export default function Hero() {
 
                 <IconButton
                   component="a"
-                  href="mailto:emanuel.sceppaquercia@email.com"
+                  href="mailto:emanuel.sceppaquercia@gmail.com"
                   aria-label="Email"
                 >
                   <EmailOutlinedIcon />
