@@ -1,9 +1,15 @@
 import Button, { type ButtonProps } from "@mui/material/Button";
 
-export function AppButton(props: ButtonProps) {
+interface AppButtonProps extends ButtonProps {
+  target?: string;
+}
+
+export function AppButton({ target, ...props }: AppButtonProps) {
   return (
     <Button
       {...props}
+      component={props.href ? "a" : "button"}
+      target={target}
       sx={{
         "&:hover": {
           backgroundColor:

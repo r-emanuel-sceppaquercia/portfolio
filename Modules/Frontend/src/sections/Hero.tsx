@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Stack, Chip, Icon } from "@mui/material";
+import { Box, Grid, IconButton, Stack, Chip } from "@mui/material";
 import { AppButton, AppSection, AppTypography } from "@/components/common";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

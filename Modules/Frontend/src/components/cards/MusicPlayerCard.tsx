@@ -18,7 +18,7 @@ import { musicPlaylist } from "@/constants/MusicData";
 import { formatTime } from "@/utils/timeFormatter";
 
 export default function MusicPlayerCard() {
-  const [currentTrack, setCurrentTrack] = useState<number>(0);
+  const [currentTrack, setCurrentTrack] = useState<number>(1);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [duration, setDuration] = useState(0);

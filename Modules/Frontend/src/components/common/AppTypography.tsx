@@ -1,7 +1,18 @@
 import Typography, { type TypographyProps } from "@mui/material/Typography";
 
-export function AppTypography(props: TypographyProps) {
+interface AppTypographyProps extends TypographyProps {
+  target?: string;
+  href?: string;
+}
+
+export function AppTypography({ target, href, ...props }: AppTypographyProps) {
   return (
-    <Typography {...props} sx={{ overflowWrap: "break-word", ...props.sx }} />
+    <Typography
+      component={target ? "a" : "p"}
+      target={target}
+      href={href}
+      {...props}
+      sx={{ overflowWrap: "break-word", ...props.sx }}
+    />
   );
 }

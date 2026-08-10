@@ -1,4 +1,4 @@
-# Emanuel Sceppaquercia — Portfolio
+# Emanuel Sceppaquercia · Personal Portfolio
 
 <p align="center">
   <img src="./docs/preview.png" alt="Portfolio Preview" />
@@ -6,7 +6,7 @@
 
 Personal portfolio developed as a web application to showcase my projects, technical skills, and professional experience.
 
-**🌐 Live website:** [https://github.com/r-emanuel-sceppaquercia/portfolio]
+**🌐 Live website:** [Click here](https://github.com/r-emanuel-sceppaquercia/portfolio/tree/develop)
 
 ## Tech Stack
 

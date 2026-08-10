@@ -1,3 +1,8 @@
+import portfolioPreview from "@/assets/projects/portfolio_promotional.png";
+import stalkerDiorama from "@/assets/projects/stalker_village_mock.png";
+import fearAndSouls from "@/assets/projects/fear_and_souls_mock.png";
+import characterConcept from "@/assets/projects/boss_design_mock.jpg";
+
 export interface Project {
   title: string;
   description: string;
@@ -16,7 +21,7 @@ export const projects: Project[] = [
     description:
       "A responsive portfolio built with ReactTS and Material UI to showcase my projects and technical skills.",
     technologies: ["React", "TypeScript", "Material Ui", "Vite"],
-    img: "/images/portfolio_promotional.png",
+    img: portfolioPreview,
     category: "WEB DEVELOPMENT",
     status: "In progress",
     featured: true,
@@ -28,7 +33,7 @@ export const projects: Project[] = [
     description:
       "A post-apocalyptic scene inspired by S.T.A.L.K.E.R., modeled in Maya and textured with Substance Painter",
     technologies: ["Maya", "Substance painter"],
-    img: "/images/stalker_village_mock.png",
+    img: stalkerDiorama,
     category: "3D ART",
     status: "Finished",
     featured: true,
@@ -40,7 +45,7 @@ export const projects: Project[] = [
     description:
       "Demo of my first game, developed with Construct 2, featuring custom mechanics, artwork and animations.",
     technologies: ["Construct2", "Photoshop", "Dragon Bones"],
-    img: "/images/fear_and_souls_mock.png",
+    img: fearAndSouls,
     category: "GAME DEVELOPMENT",
     status: "Prototype/Demo",
     featured: false,
@@ -52,7 +57,7 @@ export const projects: Project[] = [
     description:
       "Human/animal hybrid character design for a 2D video game project. Created with Photoshop and animated with Dragon Bones",
     technologies: ["Photoshop", "Dragon bones"],
-    img: "/images/boss_design_mock.jpg",
+    img: characterConcept,
     category: "2D ART & ANIMATION",
     status: "Finished",
     featured: false,
