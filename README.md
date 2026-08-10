@@ -6,7 +6,7 @@
 
 Personal portfolio developed as a web application to showcase my projects, technical skills, and professional experience.
 
-**🌐 Live website:** [Click here](https://github.com/r-emanuel-sceppaquercia/portfolio/tree/develop)
+**🌐 Live website:** [Click here](https://r-emanuel-sceppaquercia.github.io/portfolio/)
 
 ## Tech Stack
 
