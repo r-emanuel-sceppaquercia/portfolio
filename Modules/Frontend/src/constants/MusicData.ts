@@ -1,4 +1,4 @@
-import nighttimeStroll from "@assets/music/Nighttime-Stroll.mp3";
+import nighttimeStroll from "@assets/music/nighttime-stroll.mp3";
 import herbalTea from "@assets/music/herbal-tea.mp3";
 import almostThere from "@assets/music/almost-there.mp3";
 
