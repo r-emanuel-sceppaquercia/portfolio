@@ -1,6 +1,12 @@
-# Portfolio
+# Emanuel Sceppaquercia — Portfolio
 
-Personal portfolio developed as a full-stack application to showcase my projects, technical skills, and professional experience.
+<p align="center">
+  <img src="./docs/preview.png" alt="Portfolio Preview" />
+</p>
+
+Personal portfolio developed as a web application to showcase my projects, technical skills, and professional experience.
+
+**🌐 Live website:** [https://github.com/r-emanuel-sceppaquercia/portfolio]
 
 ## Tech Stack
 
@@ -18,28 +24,55 @@ Personal portfolio developed as a full-stack application to showcase my projects
 - Java
 - Spring Boot
 - Spring Security
-- MySQL
+- PostgreSQL
 
 ## Project Structure
 
 ```text
 Portfolio/
+├── docs/
+│   └── preview.png
 ├── Modules/
 │   ├── Frontend/
-│   └── Backend/
+│   └── Backend/ (planned)
+└── README.md
 ```
 
 ## Features
 
-- Responsive design (under development)
-- Dark theme (under development)
-- Project showcase (under development)
-- Contact form (under development)
-- Download CV (under development)
-- REST API integration (planned)
-- Authentication (planned)
-- Admin panel (planned)
+- Responsive design
+- Dark themed UI
+- Smooth section navigation
+- Interactive music player
+- Animated UI elements
+- Downloadable CV
+- Project showcase
 
-## Status
+## Credits
 
-🚧 Currently under development.
+### Music
+
+- **Nighttime Stroll** — Artificial.Music  
+  https://breakingcopyright.com/es/song/artificialmusic-nighttime-stroll
+
+- **Herbal Tea** — Artificial.Music  
+  https://breakingcopyright.com/es/song/artificialmusic-herbal-tea
+
+- **Almost There** — Artificial.Music  
+  https://breakingcopyright.com/es/song/artificialmusic-almost-there
+
+Licensed under **CC BY 3.0**.
+
+### Artwork
+
+- **3am lofi art** — BroAce27  
+  https://www.deviantart.com/broace27/art/3am-lofi-art-GIF-846732723
+
+Licensed under **CC BY 3.0**.
+
+## License
+
+This project is licensed under the MIT License.
+
+Third-party music and artwork remain the property of their respective creators
+and are used under their corresponding Creative Commons licenses.
